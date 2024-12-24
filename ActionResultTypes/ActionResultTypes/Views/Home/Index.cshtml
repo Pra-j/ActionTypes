@@ -1,0 +1,30 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+    var message = "Welcome to Razor";
+}
+
+<a asp-controller="Home" asp-action="Privacy">Privacy</a>   
+
+<p>@message</p>
+
+<div class="w-100">
+    <h1 className="bg-black">@("Hello," + ViewBag.Name)</h1>
+</div>
+
+@if (ViewBag.IsLoggedIn)
+{
+    <p>Welcome back!!</p>
+}
+else
+{
+    <p>Please log in.</p>   
+}
+
+<ul>
+    @for(int i = 0; i < 3; i++)
+    {
+        <li> Item @i</li>
+    }
+</ul>
+
+<p>Email us at prajwalkhatri222@@gmail.com</p>
